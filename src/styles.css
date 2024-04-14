@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    line-height: 1.5;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: #000;
+    background: #fff;
+    box-shadow: 0 10px 100px rgba(0,0,0,0.1);
+}
+.header__logo-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    display: block;
+}
+
+.header_logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    transition: color .3s;
+    transform: scale(0.8);
+
+}
+
+.socials__container-social-link .fab {
+    color: black;
+    font-size: 2rem;
+    padding-top: 1rem;
+    transition: transform .3s; /* Add this line to enable the animation */
+}
+
+.socials__container-social-link .fab:hover {
+    color: #2D72ED;
+    transform: translateY(-3px); /* Add this line to move the icon up when hovered over */
+}
+
+.socials__container-social-link .fab:active {
+    transform: translateY(1px); /* Add this line to move the icon down when clicked */
+}
+
+.socials__container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    padding: .5rem;
+}
+
+.header__logo-img-cont {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 1.5rem;
+
+}
+
+.header__logo-sub {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+.header__logo-sub:hover {
+    color: #2D72ED;
+}
+
+.btn {
+    background: #2D72ED;
+    color: #fff;
+    padding: 0.9rem 4rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    transition: transform .3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn:active {
+    transform: translateY(1px);
+
+    
+}
+
+.about__button-container{
+    margin-top: 5rem;
+    text-align: center;
+}
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding-right: 2rem;
+}
+
+.header_logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+.header_links {
+    display: flex;
+
+}
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+
+}
+
+.header__link {
+    padding: 1.2rem 1rem;
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: color .3s;
+
+}
+
+.header__link:hover {
+    color: #2D72ED;
+    text-decoration: none; 
+}
+main {
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+#project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#project-list div {
+    border: 1px solid #e1e4e8;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin-bottom: 20px;
+}
+
+#project-list div:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#project-list h3 {
+    margin-top: 0;
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+#contact {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+#contact:hover {
+    height: 200px;
+}
+
+#contact h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e4e8;
+    animation: blink 3s infinite;
+}
+
+#contact:hover h2 {
+    animation: none;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+}
+
+#contact ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#contact ul li a:hover {
+    text-decoration: underline;
+}
+
+#contact p {
+    text-align: center;
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+#about {
+    color: #fff;
+    background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(../../assets/svg/common-bg.svg);
+    background-position: center;
+    height: 100vh;
+    min-height: 50rem;
+    max-height: 120rem;
+    position: relative;
+}
+
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.description-container {
+    color: #333;
+    font-size: 2.2rem;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+}
+
+
+
+#about h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #111;
+    font-weight: 800;
+}
+
+#about p {
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 55%;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0366d6;
+    text-decoration: underline;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
